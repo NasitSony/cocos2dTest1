@@ -13,8 +13,11 @@
 #import "cocos2d.h"
 
 // HelloWorldLayer
-@interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
+@interface HelloWorldLayer : CCLayerColor <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
+    NSMutableArray * _monsters;
+    NSMutableArray * _projectiles;
+    int _monstersDestroyed;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
